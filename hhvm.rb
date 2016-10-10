@@ -97,7 +97,7 @@ class Hhvm < Formula
     # https://github.com/hhvm/homebrew-hhvm/issues/58 (works around a change in Mac OS X 10.11)
     # from here: https://github.com/Homebrew/homebrew-core/issues/2674#issuecomment-250896730
     if MacOS.version >= "10.11" && MacOS::Xcode.installed? && MacOS::Xcode.version >= "8.0"
-      # cmake_args << "-DHAVE_CLOCK_GETTIME:INTERNAL=0"
+      cmake_args << "-DHAVE_CLOCK_GETTIME:INTERNAL=0"
     end
 
     # Dependency information.
